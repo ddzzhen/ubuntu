@@ -8,9 +8,9 @@
 
 ```apt-get update && apt-get upgrade```
 
-tar.gz  解压命令：tar xvf
+tar.xz  解压命令：tar xvf
 
-tar.xz  解压命令：tar xzf
+tar.gz  解压命令：tar xzf
 ####apt常用命令
 sudo passwd							#更改root密码
 /etc/ssh/sshd_config  port=22		#对port进行修改即可改变ssh端口
