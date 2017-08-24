@@ -174,6 +174,7 @@ scp -r  -P 27875 /home/ root@1.2.3.4:/home/sample/          #使用root用户和
 ```sh
 dpkg -l|grep linux-image
 ```
+#### 方法1
 卸载不需要的内核:
 ```sh
 apt-get remove linux-image-3.16.0-92-generic
@@ -188,6 +189,13 @@ chmod +x auto-switch-kernel.sh && ./auto-switch-kernel.sh
 update-grub         #更新内核
 reboot              #重启
 ```
+#### 方法2(推荐)
+```
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+chmod +x bbr.sh
+./bbr.sh
+```
+lsmod | grep bbr   #查询	
 **#锐速一键安装**
 Ubuntu-3.13.0-29版本的锐速一键安装:
 ```sh
