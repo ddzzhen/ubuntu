@@ -105,16 +105,19 @@ vim /opt/cmd/auto.sh        #创建脚本文件
 ```
 >#!/bin/bash
 /opt/redis/redis-server		    #示例为启动redis-server
+sleep 10		#y延迟10秒再继续后面的事情
 ```sh
 chmod +x /opt/cmd/auto.sh   #设置权限
 ```
 ```sh
 vim /etc/init.d/rc.local    #编辑rc.local文件
 ```
+>在PATH的地方增加:usr/local/bin
 >在do_start()函数第一行增加自启动目录，格式为：路径 &> /dev/null &
 **示例:**
 do_start(){
-    /opt/cmd/auto.sh &> /dev/null &
+    /opt/cmd/auto.sh &> /dev/null &  
+    
     if [ -x /etc/rc.local ]  then
     ......
         }
